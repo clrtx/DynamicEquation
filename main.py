@@ -25,6 +25,7 @@ class Form(QWidget):
         self.ui.run_button.clicked.connect(self.run)
 
         for input in self.findChildren(QLineEdit):
+            name = input.objectName()
             if name != 'qt_spinbox_lineedit':
                 input.setText(str(random.randint(1, 10)))
 
