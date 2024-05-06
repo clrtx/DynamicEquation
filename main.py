@@ -1,3 +1,4 @@
+import random
 import sys
 
 from PyQt6 import QtGui, QtWidgets
@@ -20,6 +21,9 @@ class Form(QWidget):
         self.show()
         self.ui.run_button.clicked.connect(self.run)
 
+        for input in self.findChildren(QLineEdit):
+            input.setText(str(random.randint(1, 10)))
+
     def run(self):
         for input in self.findChildren(QLineEdit):
             name = input.objectName()
@@ -35,7 +39,7 @@ class Form(QWidget):
             return float(input.text())
         except:
             input.setPlaceholderText('Ошибка ввода')
-            input.setText('')
+            input.setText('0')
 
 
 if __name__ == '__main__':
