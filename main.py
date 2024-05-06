@@ -86,9 +86,9 @@ class Form(QWidget):
 
         y14 = equation.dx14t(self.inputs["x14_input"],
                              self.inputs["DS_input"],
-                             self.inputs["x14_x15_input"],
+                             self.relations["x14_x15_input"],
                              self.inputs["DV_input"],
-                             self.inputs["x14_x16_input"],
+                             self.relations["x14_x16_input"],
                              self.inputs["DP_input"])
 
         y16 = equation.dx16t(self.inputs["x16_input"],
@@ -130,21 +130,21 @@ class Form(QWidget):
                              self.inputs["P_input"])
 
         y1 = equation.dx1t(self.inputs['x1_input'], self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
-                           self.inputs['x1_x3_input'], self.inputs['x1_x19_input'], self.inputs['x1_x27_input'],
-                           self.inputs['x1_x21_input'], self.inputs['x1_x22_input'], self.inputs['x1_x23_input'],
-                           self.inputs['x1_x29_input'])
+                           self.relations['x1_x3_input'], self.relations['x1_x19_input'], self.relations['x1_x27_input'],
+                           self.relations['x1_x21_input'], self.relations['x1_x22_input'], self.relations['x1_x23_input'],
+                           self.relations['x1_x29_input'])
         y3 = equation.dx3t(self.inputs['x3_input'], self.inputs['BV_input'], self.inputs['BZ_input'],
-                           self.inputs['BC_input'], self.inputs['x3_x19_input'])
+                           self.inputs['BC_input'], self.relations['x3_x19_input'])
 
         y5 = equation.dx5t(self.inputs['x5_input'], self.inputs['C_input'], self.inputs['P_input'])
 
         y7 = equation.dx7t(self.inputs['x7_input'], self.inputs['G_input'], self.inputs['IG_input'],
-                           self.inputs['NG_input'], self.inputs['F_input'], self.inputs['x7_x14_input'])
+                           self.inputs['NG_input'], self.inputs['F_input'], self.relations['x7_x14_input'])
 
         y9 = equation.dx9t(self.inputs['x9_input'], self.inputs['Vn_input'], self.inputs['Vk_input'],
-                           self.inputs['P_input'], self.inputs['x9_x5_input'], self.inputs['x9_x6_input'])
+                           self.inputs['P_input'], self.relations['x9_x5_input'], self.relations['x9_x6_input'])
 
-        y11 = equation.dx11t(self.inputs['x11_input'], self.inputs['DBn_input'], self.inputs['DBk_input'])
+        y11 = equation.dx11t(self.inputs['x11_input'], self.inputs['DPn_input'], self.inputs['DPk_input'])
 
         y13 = equation.dx13t(self.inputs['x13_input'], self.inputs['IB_input'], self.inputs['IN_input'],
                              self.inputs['IL_input'], self.inputs['F_input'])
@@ -170,7 +170,7 @@ class Form(QWidget):
         y29 = equation.dx29t(self.inputs['x29_input'], self.inputs['SRPn_input'], self.inputs['SRPk_input'])
 
         y31 = equation.dx31t(self.inputs['x31_input'], self.inputs['IR_input'], self.inputs['NR_input'],
-                             self.inputs['F_input'], self.inputs['x31_x30_input'])
+                             self.inputs['F_input'], self.relations['x31_x30_input'])
 
         x = [self.inputs["x1_input"],
              self.inputs["x2_input"],
