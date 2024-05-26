@@ -176,45 +176,45 @@ class Form(QWidget):
                              self.inputs["RPk_input"],
                              self.inputs["P_input"])
 
-        y1 = equation.dx1t(arr[0], self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
+        y1 = equation.dx1t(self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
                            f1, f2, f6, f3, f4, f5, f7)
-        y3 = equation.dx3t(arr[2], self.inputs['BV_input'], self.inputs['BZ_input'],
+        y3 = equation.dx3t(self.inputs['BV_input'], self.inputs['BZ_input'],
                            self.inputs['BC_input'], f14)
 
-        y5 = equation.dx5t(arr[4], self.inputs['C_input'], self.inputs['P_input'])
+        y5 = equation.dx5t(self.inputs['C_input'], self.inputs['P_input'])
 
-        y7 = equation.dx7t(arr[6], self.inputs['G_input'], self.inputs['IG_input'],
+        y7 = equation.dx7t(self.inputs['G_input'], self.inputs['IG_input'],
                            self.inputs['NG_input'], self.inputs['F_input'], f25)
 
-        y9 = equation.dx9t(arr[8], self.inputs['Vn_input'], self.inputs['Vk_input'],
+        y9 = equation.dx9t(self.inputs['Vn_input'], self.inputs['Vk_input'],
                            self.inputs['P_input'], f16, f18)
 
-        y11 = equation.dx11t(arr[10], self.inputs['DPn_input'], self.inputs['DPk_input'])
+        y11 = equation.dx11t(self.inputs['DPn_input'], self.inputs['DPk_input'])
 
-        y13 = equation.dx13t(arr[12], self.inputs['IB_input'], self.inputs['IN_input'],
+        y13 = equation.dx13t(self.inputs['IB_input'], self.inputs['IN_input'],
                              self.inputs['IL_input'], self.inputs['F_input'])
 
-        y15 = equation.dx15t(arr[14], self.inputs['JPn_x15_input'], self.inputs['JPk_x15_input'],
+        y15 = equation.dx15t(self.inputs['JPn_x15_input'], self.inputs['JPk_x15_input'],
                              self.inputs['P_input'])
 
-        y17 = equation.dx17t(arr[16], self.inputs['PPn_input'], self.inputs['PPk_input'],
+        y17 = equation.dx17t(self.inputs['PPn_input'], self.inputs['PPk_input'],
                              self.inputs['P_input'])
 
-        y19 = equation.dx19t(arr[18], self.inputs['PBn_input'], self.inputs['PBk_input'],
+        y19 = equation.dx19t(self.inputs['PBn_input'], self.inputs['PBk_input'],
                              self.inputs['PB_input'])
 
-        y21 = equation.dx21t(arr[20], self.inputs['IPn_input'], self.inputs['IPk_input'])
+        y21 = equation.dx21t(self.inputs['IPn_input'], self.inputs['IPk_input'])
 
-        y23 = equation.dx23t(arr[22], self.inputs['JPn_x23_input'], self.inputs['JPk_x23_input'])
+        y23 = equation.dx23t(self.inputs['JPn_x23_input'], self.inputs['JPk_x23_input'])
 
-        y25 = equation.dx25t(arr[24], self.inputs['JPn_x25_input'], self.inputs['JPk_x25_input'],
+        y25 = equation.dx25t(self.inputs['JPn_x25_input'], self.inputs['JPk_x25_input'],
                              self.inputs['P_input'])
 
-        y27 = equation.dx27t(arr[26], self.inputs['BRPn_input'], self.inputs['BRPk_input'])
+        y27 = equation.dx27t(self.inputs['BRPn_input'], self.inputs['BRPk_input'])
 
-        y29 = equation.dx29t(arr[28], self.inputs['SRPn_input'], self.inputs['SRPk_input'])
+        y29 = equation.dx29t(self.inputs['SRPn_input'], self.inputs['SRPk_input'])
 
-        y31 = equation.dx31t(arr[30], self.inputs['IR_input'], self.inputs['NR_input'],
+        y31 = equation.dx31t(self.inputs['IR_input'], self.inputs['NR_input'],
                              self.inputs['F_input'], f34)
 
         x = [self.inputs["x1_input"],
