@@ -150,17 +150,17 @@ class Form(QWidget):
                              self.inputs["P_input"])
 
         y1 = equation.dx1t(arr[0], self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
-                           f1, f2,f6,f3,f4,f5,f7)
+                           f1, f2, f6, f3, f4, f5, f7)
         y3 = equation.dx3t(arr[2], self.inputs['BV_input'], self.inputs['BZ_input'],
-                           self.inputs['BC_input'], self.relations['x3_x19_input'])
+                           self.inputs['BC_input'], f14)
 
         y5 = equation.dx5t(arr[4], self.inputs['C_input'], self.inputs['P_input'])
 
         y7 = equation.dx7t(arr[6], self.inputs['G_input'], self.inputs['IG_input'],
-                           self.inputs['NG_input'], self.inputs['F_input'], self.relations['x7_x14_input'])
+                           self.inputs['NG_input'], self.inputs['F_input'], f25)
 
         y9 = equation.dx9t(arr[8], self.inputs['Vn_input'], self.inputs['Vk_input'],
-                           self.inputs['P_input'], self.relations['x9_x5_input'], self.relations['x9_x6_input'])
+                           self.inputs['P_input'], f16, f18)
 
         y11 = equation.dx11t(arr[10], self.inputs['DPn_input'], self.inputs['DPk_input'])
 
@@ -188,7 +188,7 @@ class Form(QWidget):
         y29 = equation.dx29t(arr[28], self.inputs['SRPn_input'], self.inputs['SRPk_input'])
 
         y31 = equation.dx31t(arr[30], self.inputs['IR_input'], self.inputs['NR_input'],
-                             self.inputs['F_input'], self.relations['x31_x30_input'])
+                             self.inputs['F_input'], f34)
 
         x = [self.inputs["x1_input"],
              self.inputs["x2_input"],
