@@ -47,7 +47,10 @@ class Form(QWidget):
 
         self.test()
 
+
     def calculate(self, t, arr):
+        f1 = self.polinom(self, self.inputs["x3_input"], self.inputs["f1k1_input"], self.inputs["f1k2_input"], self.inputs["f1k3_input"], self.inputs["f1k4_input"])
+        f2 = self.polinom(self, self.inputs["x19_input"], self.inputs["f2k1_input"], self.inputs["f2k2_input"], self.inputs["f2k3_input"], self.inputs["f2k4_input"])
         y2 = equation.dx2t(arr[1],
                            self.inputs["MPn_x2_input"],
                            self.relations["x2_x4_input"],
@@ -136,7 +139,7 @@ class Form(QWidget):
                              self.inputs["P_input"])
 
         y1 = equation.dx1t(arr[0], self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
-                           self.relations['x1_x3_input'], self.relations['x1_x19_input'],
+                           f1, f2,
                            self.relations['x1_x27_input'],
                            self.relations['x1_x21_input'], self.relations['x1_x22_input'],
                            self.relations['x1_x23_input'],
@@ -264,6 +267,9 @@ class Form(QWidget):
         except:
             input.setPlaceholderText('Ошибка ввода')
             input.setText('0')
+
+    def polinom(self, x, k1, k2, k3, k4):
+        return (k1 * x ** 3) + (k2 * x ** 2) + (k3 * x) + k4
 
 
 if __name__ == '__main__':

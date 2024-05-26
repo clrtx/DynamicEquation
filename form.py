@@ -1200,7 +1200,7 @@ class Ui_Frame(object):
     def retranslateUi(self, Frame):
         _translate = QtCore.QCoreApplication.translate
         Frame.setWindowTitle(_translate("Frame", "Frame"))
-        self.x1_label.setText(_translate("Frame", "x1="))
+        self.x1_label.setText(_translate("Frame", "среднегодовой % выпускников-бакалавров"))
         self.x2_label.setText(_translate("Frame", "x2="))
         self.x3_label.setText(_translate("Frame", "x3="))
         self.x4_label.setText(_translate("Frame", "x4="))
