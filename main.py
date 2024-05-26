@@ -47,151 +47,149 @@ class Form(QWidget):
 
         self.test()
 
-
     def calculate(self, t, arr):
-        f1 = self.polinom(self, self.inputs["x3_input"], self.inputs["f1k1_input"], self.inputs["f1k2_input"], self.inputs["f1k3_input"], self.inputs["f1k4_input"])
-        f2 = self.polinom(self, self.inputs["x19_input"], self.inputs["f2k1_input"], self.inputs["f2k2_input"], self.inputs["f2k3_input"], self.inputs["f2k4_input"])
-        f3 = self.polinom(self, self.inputs["x21_input"], self.inputs["f3k1_input"], self.inputs["f3k2_input"],self.inputs["f3k3_input"], self.inputs["f3k4_input"])
-        f4 = self.polinom(self, self.inputs["x22_input"], self.inputs["f4k1_input"], self.inputs["f4k2_input"],self.inputs["f4k3_input"], self.inputs["f4k4_input"])
-        f5 = self.polinom(self, self.inputs["x23_input"], self.inputs["f5k1_input"], self.inputs["f5k2_input"],self.inputs["f5k3_input"], self.inputs["f5k4_input"])
-        f6 = self.polinom(self, self.inputs["x27_input"], self.inputs["f6k1_input"], self.inputs["f6k2_input"], self.inputs["f6k3_input"], self.inputs["f6k4_input"])
-        f7 = self.polinom(self, self.inputs["x29_input"], self.inputs["f7k1_input"], self.inputs["f7k2_input"],self.inputs["f7k3_input"], self.inputs["f7k4_input"])
-        f14 = self.polinom(self, self.inputs["x19_input"], self.inputs["f14k1_input"], self.inputs["f14k2_input"],self.inputs["f14k3_input"], self.inputs["f14k4_input"])
-        f25 = self.polinom(self, self.inputs["x14_input"], self.inputs["f25k1_input"], self.inputs["f25k2_input"],self.inputs["f25k3_input"], self.inputs["f25k4_input"])
-        f16 = self.polinom(self, self.inputs["x5_input"], self.inputs["f16k1_input"], self.inputs["f16k2_input"],self.inputs["f16k3_input"], self.inputs["f16k4_input"])
-        f18 = self.polinom(self, self.inputs["x6_input"], self.inputs["f18k1_input"], self.inputs["f18k2_input"],self.inputs["f18k3_input"], self.inputs["f18k4_input"])
-        f34 = self.polinom(self, self.inputs["x30_input"], self.inputs["f34k1_input"], self.inputs["f34k2_input"],self.inputs["f34k3_input"], self.inputs["f34k4_input"])
+        f1 = self.polinom(self, self.inputs["x3_input"], self.inputs["f1k1_input"], self.inputs["f1k2_input"],
+                          self.inputs["f1k3_input"], self.inputs["f1k4_input"])
+        f2 = self.polinom(self, self.inputs["x19_input"], self.inputs["f2k1_input"], self.inputs["f2k2_input"],
+                          self.inputs["f2k3_input"], self.inputs["f2k4_input"])
+        f3 = self.polinom(self, self.inputs["x21_input"], self.inputs["f3k1_input"], self.inputs["f3k2_input"],
+                          self.inputs["f3k3_input"], self.inputs["f3k4_input"])
+        f4 = self.polinom(self, self.inputs["x22_input"], self.inputs["f4k1_input"], self.inputs["f4k2_input"],
+                          self.inputs["f4k3_input"], self.inputs["f4k4_input"])
+        f5 = self.polinom(self, self.inputs["x23_input"], self.inputs["f5k1_input"], self.inputs["f5k2_input"],
+                          self.inputs["f5k3_input"], self.inputs["f5k4_input"])
+        f6 = self.polinom(self, self.inputs["x27_input"], self.inputs["f6k1_input"], self.inputs["f6k2_input"],
+                          self.inputs["f6k3_input"], self.inputs["f6k4_input"])
+        f7 = self.polinom(self, self.inputs["x29_input"], self.inputs["f7k1_input"], self.inputs["f7k2_input"],
+                          self.inputs["f7k3_input"], self.inputs["f7k4_input"])
+        f14 = self.polinom(self, self.inputs["x19_input"], self.inputs["f14k1_input"], self.inputs["f14k2_input"],
+                           self.inputs["f14k3_input"], self.inputs["f14k4_input"])
+        f25 = self.polinom(self, self.inputs["x14_input"], self.inputs["f25k1_input"], self.inputs["f25k2_input"],
+                           self.inputs["f25k3_input"], self.inputs["f25k4_input"])
+        f16 = self.polinom(self, self.inputs["x5_input"], self.inputs["f16k1_input"], self.inputs["f16k2_input"],
+                           self.inputs["f16k3_input"], self.inputs["f16k4_input"])
+        f18 = self.polinom(self, self.inputs["x6_input"], self.inputs["f18k1_input"], self.inputs["f18k2_input"],
+                           self.inputs["f18k3_input"], self.inputs["f18k4_input"])
+        f34 = self.polinom(self, self.inputs["x30_input"], self.inputs["f34k1_input"], self.inputs["f34k2_input"],
+                           self.inputs["f34k3_input"], self.inputs["f34k4_input"])
 
-
-        f8 = self.polinom(self, self.inputs["x4_input"], self.inputs["f8k1_input"], self.inputs["f8k2_input"],
+        f8 = self.polinom(self.inputs["x4_input"], self.inputs["f8k1_input"], self.inputs["f8k2_input"],
                           self.inputs["f8k3_input"], self.inputs["f8k4_input"])
-        f9 = self.polinom(self, self.inputs["x20_input"], self.inputs["f9k1_input"], self.inputs["f9k2_input"],
+        f9 = self.polinom(self.inputs["x20_input"], self.inputs["f9k1_input"], self.inputs["f9k2_input"],
                           self.inputs["f9k3_input"], self.inputs["f9k4_input"])
-        f12 = self.polinom(self, self.inputs["x28_input"], self.inputs["f12k1_input"], self.inputs["f12k2_input"],
-                          self.inputs["f12k3_input"], self.inputs["f12k4_input"])
-        f10 = self.polinom(self, self.inputs["x22_input"], self.inputs["f10k1_input"], self.inputs["f10k2_input"],
-                          self.inputs["f10k3_input"], self.inputs["f10k4_input"])
-        f11 = self.polinom(self, self.inputs["x23_input"], self.inputs["f11k1_input"], self.inputs["f11k2_input"],
-                          self.inputs["f11k3_input"], self.inputs["f11k4_input"])
-        f13 = self.polinom(self, self.inputs["x29_input"], self.inputs["f13k1_input"], self.inputs["f13k2_input"],
-                          self.inputs["f13k3_input"], self.inputs["f13k4_input"])
-        f15 = self.polinom(self, self.inputs["x20_input"], self.inputs["f15k1_input"], self.inputs["f15k2_input"],
-                          self.inputs["f15k3_input"], self.inputs["f15k4_input"])
-        f21 = self.polinom(self, self.inputs["x12_input"], self.inputs["f21k1_input"], self.inputs["f21k2_input"],
-                          self.inputs["f21k3_input"], self.inputs["f21k4_input"])
-        f17 = self.polinom(self, self.inputs["x8_input"], self.inputs["f17k1_input"], self.inputs["f17k2_input"],
-                          self.inputs["f17k3_input"], self.inputs["f17k4_input"])
-        f19 = self.polinom(self, self.inputs["x10_input"], self.inputs["f19k1_input"], self.inputs["f19k2_input"],
-                          self.inputs["f19k3_input"], self.inputs["f19k4_input"])
-        f22 = self.polinom(self, self.inputs["x17_input"], self.inputs["f22k1_input"], self.inputs["f22k2_input"],
-                          self.inputs["f22k3_input"], self.inputs["f22k4_input"])
-        f20 = self.polinom(self, self.inputs["x11_input"], self.inputs["f20k1_input"], self.inputs["f20k2_input"],
-                          self.inputs["f20k3_input"], self.inputs["f20k4_input"])
-        f23 = self.polinom(self, self.inputs["x25_input"], self.inputs["f23k1_input"], self.inputs["f23k2_input"],
-                          self.inputs["f23k3_input"], self.inputs["f23k4_input"])
-        f24 = self.polinom(self, self.inputs["x30_input"], self.inputs["f24k1_input"], self.inputs["f24k2_input"],
-                          self.inputs["f24k3_input"], self.inputs["f24k4_input"])
+        f12 = self.polinom(self.inputs["x28_input"], self.inputs["f12k1_input"], self.inputs["f12k2_input"],
+                           self.inputs["f12k3_input"], self.inputs["f12k4_input"])
+        f10 = self.polinom(self.inputs["x22_input"], self.inputs["f10k1_input"], self.inputs["f10k2_input"],
+                           self.inputs["f10k3_input"], self.inputs["f10k4_input"])
+        f11 = self.polinom(self.inputs["x23_input"], self.inputs["f11k1_input"], self.inputs["f11k2_input"],
+                           self.inputs["f11k3_input"], self.inputs["f11k4_input"])
+        f13 = self.polinom(self.inputs["x29_input"], self.inputs["f13k1_input"], self.inputs["f13k2_input"],
+                           self.inputs["f13k3_input"], self.inputs["f13k4_input"])
+        f15 = self.polinom(self.inputs["x20_input"], self.inputs["f15k1_input"], self.inputs["f15k2_input"],
+                           self.inputs["f15k3_input"], self.inputs["f15k4_input"])
+        f21 = self.polinom(self.inputs["x12_input"], self.inputs["f21k1_input"], self.inputs["f21k2_input"],
+                           self.inputs["f21k3_input"], self.inputs["f21k4_input"])
+        f17 = self.polinom(self.inputs["x8_input"], self.inputs["f17k1_input"], self.inputs["f17k2_input"],
+                           self.inputs["f17k3_input"], self.inputs["f17k4_input"])
+        f19 = self.polinom(self.inputs["x10_input"], self.inputs["f19k1_input"], self.inputs["f19k2_input"],
+                           self.inputs["f19k3_input"], self.inputs["f19k4_input"])
+        f22 = self.polinom(self.inputs["x17_input"], self.inputs["f22k1_input"], self.inputs["f22k2_input"],
+                           self.inputs["f22k3_input"], self.inputs["f22k4_input"])
+        f20 = self.polinom(self.inputs["x11_input"], self.inputs["f20k1_input"], self.inputs["f20k2_input"],
+                           self.inputs["f20k3_input"], self.inputs["f20k4_input"])
+        f23 = self.polinom(self.inputs["x25_input"], self.inputs["f23k1_input"], self.inputs["f23k2_input"],
+                           self.inputs["f23k3_input"], self.inputs["f23k4_input"])
+        f24 = self.polinom(self.inputs["x30_input"], self.inputs["f24k1_input"], self.inputs["f24k2_input"],
+                           self.inputs["f24k3_input"], self.inputs["f24k4_input"])
 
-        f28 = self.polinom(self, self.inputs["x15_input"], self.inputs["f28k1_input"], self.inputs["f28k2_input"],
-                          self.inputs["f28k3_input"], self.inputs["f28k4_input"])
-        f29 = self.polinom(self, self.inputs["x16_input"], self.inputs["f29k1_input"], self.inputs["f29k2_input"],
-                          self.inputs["f29k3_input"], self.inputs["f29k4_input"])
-        f31 = self.polinom(self, self.inputs["x26_input"], self.inputs["f31k1_input"], self.inputs["f31k2_input"],
-                          self.inputs["f31k3_input"], self.inputs["f31k4_input"])
-        f33 = self.polinom(self, self.inputs["x26_input"], self.inputs["f33k1_input"], self.inputs["f33k2_input"],
-                          self.inputs["f33k3_input"], self.inputs["f33k4_input"])
-        f32 = self.polinom(self, self.inputs["x21_input"], self.inputs["f32k1_input"], self.inputs["f32k2_input"],
-                          self.inputs["f32k3_input"], self.inputs["f32k4_input"])
+        f28 = self.polinom(self.inputs["x15_input"], self.inputs["f28k1_input"], self.inputs["f28k2_input"],
+                           self.inputs["f28k3_input"], self.inputs["f28k4_input"])
+        f29 = self.polinom(self.inputs["x16_input"], self.inputs["f29k1_input"], self.inputs["f29k2_input"],
+                           self.inputs["f29k3_input"], self.inputs["f29k4_input"])
+        f31 = self.polinom(self.inputs["x26_input"], self.inputs["f31k1_input"], self.inputs["f31k2_input"],
+                           self.inputs["f31k3_input"], self.inputs["f31k4_input"])
+        f33 = self.polinom(self.inputs["x26_input"], self.inputs["f33k1_input"], self.inputs["f33k2_input"],
+                           self.inputs["f33k3_input"], self.inputs["f33k4_input"])
+        f32 = self.polinom(self.inputs["x21_input"], self.inputs["f32k1_input"], self.inputs["f32k2_input"],
+                           self.inputs["f32k3_input"], self.inputs["f32k4_input"])
 
-        y2 = equation.dx2t(arr[1],
-                           self.inputs["MPn_x2_input"],
-                           self.relations["x2_x4_input"],
-                           self.relations["x2_x20_input"],
-                           self.relations["x2_x28_input"],
+        y2 = equation.dx2t(self.inputs["MPn_x2_input"],
+                           f8,
+                           f9,
+                           f12,
                            self.inputs["MPk_x2_input"],
-                           self.relations["x2_x22_input"],
-                           self.relations["x2_x23_input"],
-                           self.relations["x2_x29_input"])
+                           f10,
+                           f11,
+                           f13)
 
-        y4 = equation.dx4t(arr[3],
-                           self.inputs["MV_input"],
+        y4 = equation.dx4t(self.inputs["MV_input"],
                            self.inputs["MZ_input"],
-                           self.relations["x4_x20_input"],
+                           f15,
                            self.inputs["MC_input"])
 
-        y6 = equation.dx6t(arr[5],
-                           self.inputs["PT_input"],
-                           self.relations["x6_x12_input"],
+        y6 = equation.dx6t(self.inputs["PT_input"],
+                           f21,
                            self.inputs["PI_input"],
-                           self.relations["x6_x8_input"],
+                           f17,
                            self.inputs["PJ_input"],
-                           self.relations["x6_x10_input"],
+                           f19,
                            self.inputs["PD_input"],
-                           self.relations["x6_x17_input"],
-                           self.inputs["PS_input"])
+                           f22,
+                           self.inputs["PS_input"],
+                           f20,
+                           f23,
+                           f24)
 
-        y8 = equation.dx8t(arr[7],
-                           self.inputs["An_input"],
+        y8 = equation.dx8t(self.inputs["An_input"],
                            self.inputs["Ak_input"],
                            self.inputs["P_input"])
 
-        y10 = equation.dx10t(arr[9],
-                             self.inputs["IDPn_input"],
+        y10 = equation.dx10t(self.inputs["IDPn_input"],
                              self.inputs["IDPk_input"],
                              self.inputs["P_input"])
 
-        y12 = equation.dx12t(arr[11],
-                             self.inputs["BPn_x12_input"],
+        y12 = equation.dx12t(self.inputs["BPn_x12_input"],
                              self.inputs["BPk_x12_input"],
                              self.inputs["P_input"])
 
-        y14 = equation.dx14t(arr[13],
-                             self.inputs["DS_input"],
-                             self.relations["x14_x15_input"],
+        y14 = equation.dx14t(self.inputs["DS_input"],
+                             f28,
                              self.inputs["DV_input"],
-                             self.relations["x14_x16_input"],
+                             f29,
                              self.inputs["DP_input"])
 
-        y16 = equation.dx16t(arr[15],
-                             self.inputs["INn_input"],
+        y16 = equation.dx16t(self.inputs["INn_input"],
                              self.inputs["INk_input"],
                              self.inputs["NPP_input"])
 
-        y18 = equation.x18(arr[17],
-                           self.inputs["AI_input"],
+        y18 = equation.x18(self.inputs["AI_input"],
                            self.inputs["AIp_input"],
-                           self.relations["x18_x26_input"])
+                           f31)
 
-        y20 = equation.dx20t(arr[19],
-                             self.inputs["PMn_input"],
+        y20 = equation.dx20t(self.inputs["PMn_input"],
                              self.inputs["PMk_input"],
                              self.inputs["PM_input"])
 
-        y22 = equation.dx22t(arr[21],
-                             self.inputs["OPn_input"],
+        y22 = equation.dx22t(self.inputs["OPn_input"],
                              self.inputs["OPk_input"])
 
-        y24 = equation.dx24t(arr[23],
-                             self.inputs["ISPn_input"],
+        y24 = equation.dx24t(self.inputs["ISPn_input"],
                              self.inputs["ISPk_input"],
-                             self.relations["x24_x26_input"])
+                             f33)
 
-        y26 = equation.dx26t(arr[25],
-                             self.inputs["IDPn_input"],
-                             self.relations["x26_x21_input"],
+        y26 = equation.dx26t(self.inputs["IDPn_input"],
+                             f32,
                              self.inputs["IDPk_input"])
 
-        y28 = equation.dx28t(arr[27],
-                             self.inputs["MRPn_input"],
+        y28 = equation.dx28t(self.inputs["MRPn_input"],
                              self.inputs["MRPk_input"])
 
-        y30 = equation.dx30t(arr[29],
-                             self.inputs["RPn_input"],
+        y30 = equation.dx30t(self.inputs["RPn_input"],
                              self.inputs["RPk_input"],
                              self.inputs["P_input"])
 
         y1 = equation.dx1t(arr[0], self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
-                           f1, f2,f6,f3,f4,f5,f7)
+                           f1, f2, f6, f3, f4, f5, f7)
         y3 = equation.dx3t(arr[2], self.inputs['BV_input'], self.inputs['BZ_input'],
                            self.inputs['BC_input'], self.relations['x3_x19_input'])
 
@@ -298,7 +296,7 @@ class Form(QWidget):
              self.inputs["x29_input"],
              self.inputs["x30_input"],
              self.inputs["x31_input"]]
-        solution = solve_ivp(self.calculate, (0,1), x)
+        solution = solve_ivp(self.calculate, (0, 1), x)
         plt.figure(figsize=(14, 9), dpi=100)
         # Plot the results
         for index, element in enumerate(solution.y):
@@ -307,8 +305,8 @@ class Form(QWidget):
         # plt.close()
         plt.show()
 
-
         return solution
+
     def parse(self, input):
         try:
             return float(input.text())
