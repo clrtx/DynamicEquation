@@ -48,6 +48,18 @@ class Form(QWidget):
         self.test()
 
     def calculate(self, t, arr):
+        f1 = self.polinom(self.inputs["x3_input"], self.inputs["f1k1_input"], self.inputs["f1k2_input"], self.inputs["f1k3_input"], self.inputs["f1k4_input"])
+        f2 = self.polinom(self.inputs["x19_input"], self.inputs["f2k1_input"], self.inputs["f2k2_input"], self.inputs["f2k3_input"], self.inputs["f2k4_input"])
+        f3 = self.polinom(self.inputs["x21_input"], self.inputs["f3k1_input"], self.inputs["f3k2_input"],self.inputs["f3k3_input"], self.inputs["f3k4_input"])
+        f4 = self.polinom(self.inputs["x22_input"], self.inputs["f4k1_input"], self.inputs["f4k2_input"],self.inputs["f4k3_input"], self.inputs["f4k4_input"])
+        f5 = self.polinom(self.inputs["x23_input"], self.inputs["f5k1_input"], self.inputs["f5k2_input"],self.inputs["f5k3_input"], self.inputs["f5k4_input"])
+        f6 = self.polinom(self.inputs["x27_input"], self.inputs["f6k1_input"], self.inputs["f6k2_input"], self.inputs["f6k3_input"], self.inputs["f6k4_input"])
+        f7 = self.polinom(self.inputs["x29_input"], self.inputs["f7k1_input"], self.inputs["f7k2_input"],self.inputs["f7k3_input"], self.inputs["f7k4_input"])
+        f14 = self.polinom(self.inputs["x19_input"], self.inputs["f14k1_input"], self.inputs["f14k2_input"],self.inputs["f14k3_input"], self.inputs["f14k4_input"])
+        f25 = self.polinom(self.inputs["x14_input"], self.inputs["f25k1_input"], self.inputs["f25k2_input"],self.inputs["f25k3_input"], self.inputs["f25k4_input"])
+        f16 = self.polinom(self.inputs["x5_input"], self.inputs["f16k1_input"], self.inputs["f16k2_input"],self.inputs["f16k3_input"], self.inputs["f16k4_input"])
+        f18 = self.polinom(self.inputs["x6_input"], self.inputs["f18k1_input"], self.inputs["f18k2_input"],self.inputs["f18k3_input"], self.inputs["f18k4_input"])
+        f34 = self.polinom(self.inputs["x30_input"], self.inputs["f34k1_input"], self.inputs["f34k2_input"],self.inputs["f34k3_input"], self.inputs["f34k4_input"])
         f1 = self.polinom(self, self.inputs["x3_input"], self.inputs["f1k1_input"], self.inputs["f1k2_input"],
                           self.inputs["f1k3_input"], self.inputs["f1k4_input"])
         f2 = self.polinom(self, self.inputs["x19_input"], self.inputs["f2k1_input"], self.inputs["f2k2_input"],
@@ -191,15 +203,15 @@ class Form(QWidget):
         y1 = equation.dx1t(arr[0], self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
                            f1, f2, f6, f3, f4, f5, f7)
         y3 = equation.dx3t(arr[2], self.inputs['BV_input'], self.inputs['BZ_input'],
-                           self.inputs['BC_input'], self.relations['x3_x19_input'])
+                           self.inputs['BC_input'], f14)
 
         y5 = equation.dx5t(arr[4], self.inputs['C_input'], self.inputs['P_input'])
 
         y7 = equation.dx7t(arr[6], self.inputs['G_input'], self.inputs['IG_input'],
-                           self.inputs['NG_input'], self.inputs['F_input'], self.relations['x7_x14_input'])
+                           self.inputs['NG_input'], self.inputs['F_input'], f25)
 
         y9 = equation.dx9t(arr[8], self.inputs['Vn_input'], self.inputs['Vk_input'],
-                           self.inputs['P_input'], self.relations['x9_x5_input'], self.relations['x9_x6_input'])
+                           self.inputs['P_input'], f16, f18)
 
         y11 = equation.dx11t(arr[10], self.inputs['DPn_input'], self.inputs['DPk_input'])
 
@@ -227,7 +239,7 @@ class Form(QWidget):
         y29 = equation.dx29t(arr[28], self.inputs['SRPn_input'], self.inputs['SRPk_input'])
 
         y31 = equation.dx31t(arr[30], self.inputs['IR_input'], self.inputs['NR_input'],
-                             self.inputs['F_input'], self.relations['x31_x30_input'])
+                             self.inputs['F_input'], f34)
 
         x = [self.inputs["x1_input"],
              self.inputs["x2_input"],
