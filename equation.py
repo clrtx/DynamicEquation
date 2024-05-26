@@ -1,10 +1,10 @@
-def dx1t(x1, bpn, bpk, x1x3, x1x19, x1x27, x1x21, x1x22, x1x23, x1x29):
-    res = x1 * (bpn / x1 * x1x3 * x1x19 * x1x27) - (bpk / x1 * x1x21 * x1x22 * x1x23 * x1x29)
+def dx1t(x1, bpn, bpk, polx3, polx19, polx27, polx21, polx22,polx23,polx29):
+    res = (bpn / x1 * polx3 * polx19 * polx27) - (bpk / x1 * polx21 * polx22 * polx23 * polx29)
     return res
 
 
 def dx2t(x2, mpn, x2x4, x2x20, x2x28, mpk, x2x22, x2x23, x2x29):
-    return x2 * (((mpn / x2) * x2x4 * x2x20 * x2x28) - ((mpk / x2) * x2x22 * x2x23 * x2x29))
+    return (((mpn / x2) * x2x4 * x2x20 * x2x28) - ((mpk / x2) * x2x22 * x2x23 * x2x29))
 
 
 def dx3t(x3, bv, bz, x3x19, bc):
@@ -136,3 +136,4 @@ def dx30t(x30, rpn, rpk, p):
 def dx31t(x31, ir, nr, f, x31x30):
     res = x31 * (ir - nr) / f * x31x30
     return res
+
