@@ -51,6 +51,47 @@ class Form(QWidget):
     def calculate(self, t, arr):
         f1 = self.polinom(self, self.inputs["x3_input"], self.inputs["f1k1_input"], self.inputs["f1k2_input"], self.inputs["f1k3_input"], self.inputs["f1k4_input"])
         f2 = self.polinom(self, self.inputs["x19_input"], self.inputs["f2k1_input"], self.inputs["f2k2_input"], self.inputs["f2k3_input"], self.inputs["f2k4_input"])
+
+        f8 = self.polinom(self, self.inputs["x4_input"], self.inputs["f8k1_input"], self.inputs["f8k2_input"],
+                          self.inputs["f8k3_input"], self.inputs["f8k4_input"])
+        f9 = self.polinom(self, self.inputs["x20_input"], self.inputs["f9k1_input"], self.inputs["f9k2_input"],
+                          self.inputs["f9k3_input"], self.inputs["f9k4_input"])
+        f12 = self.polinom(self, self.inputs["x28_input"], self.inputs["f12k1_input"], self.inputs["f12k2_input"],
+                          self.inputs["f12k3_input"], self.inputs["f12k4_input"])
+        f10 = self.polinom(self, self.inputs["x22_input"], self.inputs["f10k1_input"], self.inputs["f10k2_input"],
+                          self.inputs["f10k3_input"], self.inputs["f10k4_input"])
+        f11 = self.polinom(self, self.inputs["x23_input"], self.inputs["f11k1_input"], self.inputs["f11k2_input"],
+                          self.inputs["f11k3_input"], self.inputs["f11k4_input"])
+        f13 = self.polinom(self, self.inputs["x29_input"], self.inputs["f13k1_input"], self.inputs["f13k2_input"],
+                          self.inputs["f13k3_input"], self.inputs["f13k4_input"])
+        f15 = self.polinom(self, self.inputs["x20_input"], self.inputs["f15k1_input"], self.inputs["f15k2_input"],
+                          self.inputs["f15k3_input"], self.inputs["f15k4_input"])
+        f21 = self.polinom(self, self.inputs["x12_input"], self.inputs["f21k1_input"], self.inputs["f21k2_input"],
+                          self.inputs["f21k3_input"], self.inputs["f21k4_input"])
+        f17 = self.polinom(self, self.inputs["x8_input"], self.inputs["f17k1_input"], self.inputs["f17k2_input"],
+                          self.inputs["f17k3_input"], self.inputs["f17k4_input"])
+        f19 = self.polinom(self, self.inputs["x10_input"], self.inputs["f19k1_input"], self.inputs["f19k2_input"],
+                          self.inputs["f19k3_input"], self.inputs["f19k4_input"])
+        f22 = self.polinom(self, self.inputs["x17_input"], self.inputs["f22k1_input"], self.inputs["f22k2_input"],
+                          self.inputs["f22k3_input"], self.inputs["f22k4_input"])
+        f20 = self.polinom(self, self.inputs["x11_input"], self.inputs["f20k1_input"], self.inputs["f20k2_input"],
+                          self.inputs["f20k3_input"], self.inputs["f20k4_input"])
+        f23 = self.polinom(self, self.inputs["x25_input"], self.inputs["f23k1_input"], self.inputs["f23k2_input"],
+                          self.inputs["f23k3_input"], self.inputs["f23k4_input"])
+        f24 = self.polinom(self, self.inputs["x30_input"], self.inputs["f24k1_input"], self.inputs["f24k2_input"],
+                          self.inputs["f24k3_input"], self.inputs["f24k4_input"])
+
+        f28 = self.polinom(self, self.inputs["x15_input"], self.inputs["f28k1_input"], self.inputs["f28k2_input"],
+                          self.inputs["f28k3_input"], self.inputs["f28k4_input"])
+        f29 = self.polinom(self, self.inputs["x16_input"], self.inputs["f29k1_input"], self.inputs["f29k2_input"],
+                          self.inputs["f29k3_input"], self.inputs["f29k4_input"])
+        f31 = self.polinom(self, self.inputs["x26_input"], self.inputs["f31k1_input"], self.inputs["f31k2_input"],
+                          self.inputs["f31k3_input"], self.inputs["f31k4_input"])
+        f33 = self.polinom(self, self.inputs["x26_input"], self.inputs["f33k1_input"], self.inputs["f33k2_input"],
+                          self.inputs["f33k3_input"], self.inputs["f33k4_input"])
+        f32 = self.polinom(self, self.inputs["x21_input"], self.inputs["f32k1_input"], self.inputs["f32k2_input"],
+                          self.inputs["f32k3_input"], self.inputs["f32k4_input"])
+
         y2 = equation.dx2t(arr[1],
                            self.inputs["MPn_x2_input"],
                            self.relations["x2_x4_input"],

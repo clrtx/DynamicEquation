@@ -3,7 +3,7 @@ def dx1t(bpn, bpk, polx3, polx19, polx27, polx21, polx22,polx23,polx29):
     return res
 
 
-def dx2t(x2, mpn, x2x4, polx20, polx28, mpk, polx22, polx23, polx29):
+def dx2t(mpn, x2x4, polx20, polx28, mpk, polx22, polx23, polx29):
     return (mpn * x2x4 * polx20 * polx28) - (mpk * polx22 * polx23 * polx29)
 
 
