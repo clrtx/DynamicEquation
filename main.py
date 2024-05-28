@@ -176,7 +176,7 @@ class Form(QWidget):
                              self.inputs["RPk_input"],
                              self.inputs["P_input"])
 
-        y1 = equation.dx1t(self.inputs['x1_input'],self.inputs['BPn_x1_input'],1, #self.inputs['BPk_x1_input'],
+        y1 = equation.dx1t(self.inputs['x1_input'],self.inputs['BPn_x1_input'],self.inputs['BPk_x1_input'],
                            f1, f2, f6, f3, f4, f5, f7)
         y3 = equation.dx3t(self.inputs['BV_input'], self.inputs['BZ_input'],
                            self.inputs['BC_input'], f14)
