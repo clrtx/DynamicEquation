@@ -30,7 +30,7 @@ class Form(QWidget):
         for input in self.findChildren(QLineEdit):
             name = input.objectName()
             if name != 'qt_spinbox_lineedit':
-                input.setText(str(random.randint(1, 10)))
+                input.setText(str(format(random.uniform(0.1,1.0), '.2f')))
 
     def run(self):
 
@@ -101,7 +101,7 @@ class Form(QWidget):
         f32 = self.polinom(self.inputs["x21_input"], self.inputs["f32k1_input"], self.inputs["f32k2_input"],
                            self.inputs["f32k3_input"], self.inputs["f32k4_input"])
 
-        y2 = equation.dx2t(self.inputs["MPn_x2_input"],
+        y2 = equation.dx2t(self.inputs['x2_input'],self.inputs["MPn_x2_input"],
                            f8,
                            f9,
                            f12,
@@ -158,25 +158,25 @@ class Form(QWidget):
                              self.inputs["PMk_input"],
                              self.inputs["PM_input"])
 
-        y22 = equation.dx22t(self.inputs["OPn_input"],
+        y22 = equation.dx22t(self.inputs['x22_input'],self.inputs["OPn_input"],
                              self.inputs["OPk_input"])
 
-        y24 = equation.dx24t(self.inputs["ISPn_input"],
+        y24 = equation.dx24t(self.inputs['x24_input'],self.inputs["ISPn_input"],
                              self.inputs["ISPk_input"],
                              f33)
 
-        y26 = equation.dx26t(self.inputs["IDPn_input"],
+        y26 = equation.dx26t(self.inputs['x26_input'],self.inputs["IDPn_input"],
                              f32,
                              self.inputs["IDPk_input"])
 
-        y28 = equation.dx28t(self.inputs["MRPn_input"],
+        y28 = equation.dx28t(self.inputs['x28_input'],self.inputs["MRPn_input"],
                              self.inputs["MRPk_input"])
 
         y30 = equation.dx30t(self.inputs["RPn_input"],
                              self.inputs["RPk_input"],
                              self.inputs["P_input"])
 
-        y1 = equation.dx1t(self.inputs['BPn_x1_input'], self.inputs['BPk_x1_input'],
+        y1 = equation.dx1t(self.inputs['x1_input'],self.inputs['BPn_x1_input'],1, #self.inputs['BPk_x1_input'],
                            f1, f2, f6, f3, f4, f5, f7)
         y3 = equation.dx3t(self.inputs['BV_input'], self.inputs['BZ_input'],
                            self.inputs['BC_input'], f14)
@@ -189,7 +189,7 @@ class Form(QWidget):
         y9 = equation.dx9t(self.inputs['Vn_input'], self.inputs['Vk_input'],
                            self.inputs['P_input'], f16, f18)
 
-        y11 = equation.dx11t(self.inputs['DPn_input'], self.inputs['DPk_input'])
+        y11 = equation.dx11t(self.inputs['x11_input'],self.inputs['DPn_input'], self.inputs['DPk_input'])
 
         y13 = equation.dx13t(self.inputs['IB_input'], self.inputs['IN_input'],
                              self.inputs['IL_input'], self.inputs['F_input'])
@@ -203,16 +203,16 @@ class Form(QWidget):
         y19 = equation.dx19t(self.inputs['PBn_input'], self.inputs['PBk_input'],
                              self.inputs['PB_input'])
 
-        y21 = equation.dx21t(self.inputs['IPn_input'], self.inputs['IPk_input'])
+        y21 = equation.dx21t(self.inputs['x21_input'],self.inputs['IPn_input'], self.inputs['IPk_input'])
 
-        y23 = equation.dx23t(self.inputs['JPn_x23_input'], self.inputs['JPk_x23_input'])
+        y23 = equation.dx23t(self.inputs['x23_input'],self.inputs['JPn_x23_input'], self.inputs['JPk_x23_input'])
 
         y25 = equation.dx25t(self.inputs['JPn_x25_input'], self.inputs['JPk_x25_input'],
                              self.inputs['P_input'])
 
-        y27 = equation.dx27t(self.inputs['BRPn_input'], self.inputs['BRPk_input'])
+        y27 = equation.dx27t(self.inputs['x27_input'],self.inputs['BRPn_input'], self.inputs['BRPk_input'])
 
-        y29 = equation.dx29t(self.inputs['SRPn_input'], self.inputs['SRPk_input'])
+        y29 = equation.dx29t(self.inputs['x29_input'],self.inputs['SRPn_input'], self.inputs['SRPk_input'])
 
         y31 = equation.dx31t(self.inputs['IR_input'], self.inputs['NR_input'],
                              self.inputs['F_input'], f34)
@@ -284,7 +284,10 @@ class Form(QWidget):
              self.inputs["x29_input"],
              self.inputs["x30_input"],
              self.inputs["x31_input"]]
-        solution = solve_ivp(self.calculate, (0, 1), x)
+        arr0 = []
+        for i in range(31):
+            arr0.append(0)
+        solution = solve_ivp(self.calculate, (0,1), x)
         plt.figure(figsize=(14, 9), dpi=100)
         # Plot the results
         for index, element in enumerate(solution.y):
