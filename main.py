@@ -322,7 +322,7 @@ class Form(QWidget):
              self.inputs["x31_input"]]
 
         solution = solve_ivp(self.calculate, (0, 1), x)
-        fig, axs = plt.subplots(2, 2, figsize=(14, 9), dpi=100)  # Создаем сетку из 4 графиков (2x2)
+        fig, axs = plt.subplots(2, 2, figsize=(16, 9), dpi=100)  # Создаем сетку из 4 графиков (2x2)
         axs = axs.flatten()  # Преобразуем массив в одномерный для простоты индексации
 
         # Плоты на подграфиках
@@ -338,7 +338,7 @@ class Form(QWidget):
             ax.plot(solution.t, solution.y[index], label=f'{xNameArray[index]}')
             ax.set_xlabel('Время (мин)')
             ax.set_ylabel(f'{index}')
-            ax.legend()
+            ax.legend(loc='lower center', bbox_to_anchor=(1.1, 1.05), ncol=1, fontsize='small')
 
         plt.tight_layout()
         plt.show()
