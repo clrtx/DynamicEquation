@@ -284,16 +284,19 @@ class Form(QWidget):
              self.inputs["x29_input"],
              self.inputs["x30_input"],
              self.inputs["x31_input"]]
-        arr0 = []
-        for i in range(31):
-            arr0.append(0)
-        solution = solve_ivp(self.calculate, (0,1), x)
-        plt.figure(figsize=(14, 9), dpi=100)
-        # Plot the results
-        for index, element in enumerate(solution.y):
-            plt.plot(solution.t, solution.y[index], label=f'P{index}(t)')
-        plt.xlabel('Время (мин)')
-        # plt.close()
+
+        solution = solve_ivp(self.calculate, (0, 1), self.x)
+        fig, axs = plt.subplots(2, 2, figsize=(14, 9), dpi=100)  # Создаем сетку из 4 графиков (2x2)
+
+        # Плоты на подграфиках
+        for index in range(solution.y.shape[0]):
+            ax = axs[index // 2, index % 2]  # Выбираем подграфик
+            ax.plot(solution.t, solution.y[index], label=f'P{index}(t)')
+            ax.set_xlabel('Время (мин)')
+            ax.set_ylabel(f'P{index}(t)')
+            ax.legend()
+
+        plt.tight_layout()
         plt.show()
 
         return solution
